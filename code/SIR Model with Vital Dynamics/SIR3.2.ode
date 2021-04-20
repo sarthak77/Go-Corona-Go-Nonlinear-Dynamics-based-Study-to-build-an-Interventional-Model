@@ -1,0 +1,17 @@
+#Section 3.2 (SIR model with vital dynamics)
+#x=birth rate, d=death rate
+inti S=9800,I=190,R=10
+dS/dt = x*N-(B*S*(I/N)+d*S)
+dI/dt = B*S*(I/N)-y*I-d*I
+dR/dt = y*I-d*r
+#R0>1
+#param B=0.2,N=10000,y=0.05,x=0.02,d=0.007
+#R0<1
+param B=0.1,N=10000,y=0.3,x=0.02,d=0.007
+@ total=1000,dt=.01
+@ xplot=t, yplot=x
+#@ xmin=0,xmax=70,ymin=0,ymax=10000
+@ xmin=0,xmax=70,ymin=0,ymax=1000
+@ maxstor=1000000
+@ bound=20000
+done

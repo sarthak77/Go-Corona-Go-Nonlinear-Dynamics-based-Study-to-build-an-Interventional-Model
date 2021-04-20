@@ -1,0 +1,7 @@
+## Code : saturated.ode
+### Study of SIRS Model with a saturated infection force
+### Author : Sarthak Singhal
+compile and run instruction : 
+```sh
+xppaut saturated.ode
+```

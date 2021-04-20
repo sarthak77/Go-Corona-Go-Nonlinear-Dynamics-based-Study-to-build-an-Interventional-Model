@@ -1,0 +1,13 @@
+#Section 4.2 (Saturated force)
+inti I=90,R=10
+#dI/dt = I*0.1*(0.0005+min(I*0.1,1/((I*I)+1)))*(C-I-R)-(d+y)*I
+dI/dt = I*0.001*(0.0005+min(I*0.1,1/((I*I)+1)))*(C-I-R)-(d+y)*I
+dR/dt = y*I-(d+u)*R
+param C=10000,d=0.007,y=0.05,u=0.02
+@ total=100,dt=.01
+@ xplot=t, yplot=I
+#@ xmin=0,xmax=70,ymin=0,ymax=10000
+@ xmin=0,xmax=70,ymin=0,ymax=500
+@ maxstor=1000000
+@ bound=2000000
+done

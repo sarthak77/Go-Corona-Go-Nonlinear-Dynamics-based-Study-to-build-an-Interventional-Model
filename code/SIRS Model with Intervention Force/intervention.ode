@@ -1,0 +1,15 @@
+#Section 4.1 (Intervention force)
+inti I=190,R=10
+dI/dt = I*(l/(I*I+1))*(C-I-R)-(d+y)*I
+dR/dt = y*I-(d+u)*R
+#R0>1
+param l=10,C=10000,d=0.007,y=0.05,u=0.02
+#R0<1
+#param l=0.0001,C=10000,d=0.007,y=0.3,u=0.02
+@ total=1000,dt=.01
+@ xplot=t, yplot=x
+@ xmin=0,xmax=70,ymin=0,ymax=10000
+#@ xmin=0,xmax=70,ymin=0,ymax=1000
+@ maxstor=1000000
+@ bound=20000
+done

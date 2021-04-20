@@ -1,0 +1,16 @@
+#Section 3.1 (SIR model without vital dynamics)
+inti S=9800,I=190,R=10
+dS/dt = -B*S*(I/N)
+dI/dt = B*S*(I/N)-y*I
+dR/dt = y*I
+#R0<1
+#param B=0.1,N=10000,y=0.3
+#R0>1
+param B=0.2,N=10000,y=0.05
+@ total=1000,dt=.01
+@ xplot=t, yplot=x
+#@ xmin=0,xmax=70,ymin=0,ymax=300
+@ xmin=0,xmax=70,ymin=0,ymax=10000
+@ maxstor=1000000
+@ bound=20000
+done
