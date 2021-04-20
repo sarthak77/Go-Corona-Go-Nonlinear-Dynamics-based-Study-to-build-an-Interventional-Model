@@ -27,7 +27,7 @@ in each of the above models, we observed their dynamics.
 - We studied and discussed briefly about percolation centrality, as proposed by Piraveenan,
 Prokopenko, Hossain and using that and the nonlinear dynamic models we studied so far,
 we propose an intervention model based on percolation centrality algorithm for a large area
-consisting of multiple smaller zones. However, the computation would require O(N 3 · S), where
+consisting of multiple smaller zones. However, the computation would require O(N^3 · S), where
 S is constant time to run the simulations on NLD model. Hence, we have implemented a parallel
 percolation centrality computation algorithm in CUDA.
 - During the course of reading for the project, we explored some topics which we didn’t go into
